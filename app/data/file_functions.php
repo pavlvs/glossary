@@ -47,3 +47,24 @@ function searchTerms($search)
 
     return $results;
 }
+
+function addTerm($term, $definition)
+{
+    $items = getTerms();
+    $obj = (object) [
+        'term' => $term,
+        'definition' => $definition
+    ];
+
+    $items[] = $obj;
+    setData($items);
+}
+
+function setData($arr)
+{
+    $filename = CONFIG['dataFile'];
+
+    $json = json_encode($arr);
+
+    file_put_contents($filename, $json);
+}

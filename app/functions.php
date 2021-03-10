@@ -11,3 +11,19 @@ function redirect($url)
     header("Location: $url");
     die();
 }
+
+function isPOST()
+{
+    return $_SERVER['REQUEST_METHOD'] === 'POST';
+}
+
+function sanitize($value)
+{
+    $temp = filter_var(trim($value), FILTER_SANITIZE_STRING);
+
+    if ($temp === false) {
+        return '';
+    }
+
+    return $temp;
+}

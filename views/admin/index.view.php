@@ -5,14 +5,9 @@
         </div>
     </div>
         <div class="row">
-            <div class="col-lg-12">
-                <form action="index.php" method="GET" class="form-inline mt-3 mb-3 float-right">
-                <div class="form-group ">
-                  <input type="text" name="search" id="search" class="form-control float-right" placeholder="Search...">
-                  <button type="submit" class="btn btn-dark">Search</button>
-                </div>
-                </form>
-            </div>
+        <div class="col-lg-12">
+            <a href="create.php" class="float-right mb-2" >Add a term</a>
+        </div>
         </div>
     <div class="row">
         <table class="table table-striped">
