@@ -30,6 +30,7 @@ function getTerm($term)
             return $item;
         }
     }
+
     return false;
 }
 
@@ -58,6 +59,19 @@ function addTerm($term, $definition)
 
     $items[] = $obj;
     setData($items);
+}
+
+function updateTerm($originalTerm, $newTerm, $newDefinition)
+{
+    $terms = getTerms();
+    foreach ($terms as $item) {
+        if ($item->term == $originalTerm) {
+            $item->term = $newTerm;
+            $item->definition = $newDefinition;
+            break;
+        }
+    }
+    setData($terms);
 }
 
 function setData($arr)
