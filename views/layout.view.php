@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <title><?= $viewBag['title'] ?>
+    <title><?php echo ''; ?>
     </title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a href="#" class="navbar-brand">Glossary: <?= $viewBag['title']; ?></a>
+            <a href="#" class="navbar-brand">Glossary:                                                       <?php echo ''; ?></a>
         </div>
     </nav>
 
-    <?php require "$name.view.php" ?>
+    <?php require "$name.view.php"?>
 </body>
 
 </html>

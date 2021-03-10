@@ -1,10 +1,13 @@
 <?php
-require 'inc/functions.php';
 
-$title = 'hello,  cruel world';
+require 'app/app.php';
 
-$viewBag = [];
+$data = getData();
 
-$viewBag['title'] = 'This is the title';
+// $title = 'hello,  cruel world';
 
-view('index', $title);
+// $viewBag = [];
+
+// $viewBag['title'] = 'This is the title';
+
+view('index', $data);
