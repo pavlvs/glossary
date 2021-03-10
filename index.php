@@ -2,12 +2,8 @@
 
 require 'app/app.php';
 
-$data = getData();
+$viewBag = [
+    'title' => 'Glossary List'
+];
 
-// $title = 'hello,  cruel world';
-
-// $viewBag = [];
-
-// $viewBag['title'] = 'This is the title';
-
-view('index', $data);
+view('index', getTerms());
