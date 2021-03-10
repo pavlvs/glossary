@@ -3,7 +3,7 @@
 function view($name, $data = '')
 {
     global $viewBag;
-    require 'views/layout.view.php';
+    require APP_PATH . 'views/layout.view.php';
 }
 
 function redirect($url)
