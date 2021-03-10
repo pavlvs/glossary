@@ -71,6 +71,21 @@ function updateTerm($originalTerm, $newTerm, $newDefinition)
             break;
         }
     }
+    $newTerms = array_values($terms);
+
+    setData($newTerms);
+}
+
+function deleteTerm($term)
+{
+    $terms = getTerms();
+
+    for ($i = 0; $i < count($terms); $i++) {
+        if ($terms[$i]->term === $term) {
+            unset($terms[$i]);
+            break;
+        }
+    }
     setData($terms);
 }
 

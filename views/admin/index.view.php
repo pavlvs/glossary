@@ -20,6 +20,9 @@
                 </td>
                 <td><a href="edit.php?key=<?=$item->term?>">Edit</a>
                 </td>
+                <td><a
+                        href="delete.php?key=<?=$item->term?>">Delete</a>
+                </td>
             </tr>
             <?php endforeach;?>
 
