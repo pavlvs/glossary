@@ -8,8 +8,8 @@
         <table class="table table-striped">
         <?php foreach ($data as $item): ?>
             <tr>
-                <td><?php echo $item->term ?></td>
-                <td><?php echo $item->definition ?></td>
+                <td><a href="detail.php?term=<?=$item->term?>"><?=$item->term?></a></td>
+                <td><?=$item->definition?></td>
             </tr>
         <?php endforeach;?>
 

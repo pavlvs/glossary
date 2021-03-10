@@ -20,3 +20,15 @@ function getTerms()
 
     return json_decode($json);
 }
+
+function getTerm($term)
+{
+    $terms = getTerms();
+
+    foreach ($terms as $item) {
+        if ($item->term == $term) {
+            return $item;
+        }
+    }
+    return false;
+}
