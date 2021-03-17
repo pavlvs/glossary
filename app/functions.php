@@ -32,3 +32,25 @@ function sanitize($value)
 
     return $temp;
 }
+
+function authenticateUser($email, $password)
+{
+    $users = CONFIG['users'];
+    if (!isset($users[$email])) {
+        return false;
+    }
+    $userPassword = $users[$email];
+    return $password == $userPassword;
+}
+
+function isUserAuthenticated()
+{
+    return isset($_SESSION['email']);
+}
+
+function ensureUserIsAuthenticated()
+{
+    if (!isUserAuthenticated()) {
+        redirect('../login.php');
+    }
+}

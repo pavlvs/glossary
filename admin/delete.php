@@ -1,6 +1,8 @@
 <?php
-
+session_start();
 require '../app/app.php';
+
+ensureUserIsAuthenticated();
 
 if (isGet()) {
     $key = sanitize($_GET['key']);

@@ -1,6 +1,8 @@
 <?php
-
+session_start();
 require '../app/app.php';
+
+ensureUserIsAuthenticated();
 
 if (isPost()) {
     $term = sanitize($_POST['term']);
@@ -10,7 +12,9 @@ if (isPost()) {
         // TODO: warn user
     } else {
         addTerm($term, $definition);
-        redirect('index.php');
+        header('location: ' . APP_PATH . '/index.php');
+        die();
+        // redirect('index.php');
     }
 }
 

@@ -3,7 +3,7 @@
 require 'app/app.php';
 
 $viewBag = [
-    'title'   => 'Glossary List',
+    'title' => 'Glossary List',
     'heading' => 'Glossary'
 ];
 // die();
