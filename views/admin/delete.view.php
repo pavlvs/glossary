@@ -13,7 +13,7 @@
         <div class="col-lg-12 text-center">
             <form action="" method="post">
                 <input type="hidden" name="term"
-                    value="<?= $data->term ?>">
+                    value="<?= $data->id?>">
                 <div class="form-group">
                     <input type="submit" class="btn btn-dark" value="Delete Term">
                 </div>
