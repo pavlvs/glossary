@@ -6,5 +6,6 @@ require 'config.php';
 require 'functions.php';
 require 'data/Data.php';
 require 'data/FileDataProvider.php';
+require 'data/MysqlDataProvider.php';
 
-Data::initialize(new FileDataProvider(CONFIG['dataFile']));
+Data::initialize(new MysqlDataProvider(CONFIG['db']));
