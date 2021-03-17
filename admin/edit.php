@@ -13,7 +13,7 @@ if (isGet()) {
         die();
     }
 
-    $term = getTerm($key);
+    $term = Data::getTerm($key);
 
     if ($term === false) {
         view('not_found');
@@ -31,7 +31,7 @@ if (isPost()) {
     if (empty($term) || empty($definition) || empty($originalTerm)) {
         // TODO: warn user
     } else {
-        updateTerm($originalTerm, $term, $definition);
+        Data::updateTerm($originalTerm, $term, $definition);
         // $host = $_SERVER['HTTP_HOST'];
         // $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         // $extra = 'index.php';

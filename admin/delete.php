@@ -12,7 +12,7 @@ if (isGet()) {
         die();
     }
 
-    $term = getTerm($key);
+    $term = Data::getTerm($key);
 
     if ($term === false) {
         view('not_found');
@@ -28,7 +28,7 @@ if (isPost()) {
     if (empty($term)) {
         // TODO: warn user
     } else {
-        deleteTerm($term);
+        Data::deleteTerm($term);
         redirect('index.php');
     }
 }

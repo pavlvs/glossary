@@ -11,7 +11,7 @@ if (isPost()) {
     if (empty($term) || empty($definition)) {
         // TODO: warn user
     } else {
-        addTerm($term, $definition);
+        Data::addTerm($term, $definition);
         header('location: ' . APP_PATH . '/index.php');
         die();
         // redirect('index.php');
