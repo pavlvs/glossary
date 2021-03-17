@@ -4,4 +4,4 @@ require '../app/app.php';
 
 ensureUserIsAuthenticated();
 
-view('admin/index', getTerms());
+view('admin/index', $data->getTerms());

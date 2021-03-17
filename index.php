@@ -8,12 +8,14 @@ $viewBag = [
 ];
 // die();
 
+$data = new FileDataProvider(CONFIG['dataFile']);
+
 if (isset($_GET['search'])) {
-    $items = searchTerms($_GET['search']);
+    $items = $data->searchTerms($_GET['search']);
 
     $viewBag['heading'] = 'Search results for "' . $_GET['search'] . '"';
 } else {
-    $items = getTerms();
+    $items = $data->getTerms();
 }
 
 view('index', $items);
