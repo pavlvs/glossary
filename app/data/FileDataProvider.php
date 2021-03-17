@@ -1,23 +1,15 @@
 <?php
-require 'GlossaryTerm.php';
 
-class FileDataProvider
+class FileDataProvider extends DataProvider
 {
-    private $filePath;
-
-    public function __construct($filePath)
-    {
-        $this->filePath = $filePath;
-    }
-
     private function getData()
     {
         $jason = '';
 
-        if (!file_exists($this->filePath)) {
-            file_put_contents($this->filePath, '');
+        if (!file_exists($this->source)) {
+            file_put_contents($this->source, '');
         } else {
-            $jason = file_get_contents($this->filePath);
+            $jason = file_get_contents($this->source);
         }
 
         return $jason;

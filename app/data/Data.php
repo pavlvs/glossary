@@ -1,10 +1,11 @@
 <?php
 
+require 'DataProvider.php';
 class Data
 {
     private static $dataStore;
 
-    public static function initialize($dataProvider)
+    public static function initialize(DataProvider $dataProvider)
     {
         return self::$dataStore = $dataProvider;
     }
@@ -16,7 +17,7 @@ class Data
 
     public static function getTerms()
     {
-        return self::$dataStore->getTerms($term);
+        return self::$dataStore->getTerms();
     }
 
     public static function searchTerms($search)
