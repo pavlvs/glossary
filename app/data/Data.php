@@ -10,9 +10,9 @@ class Data
         return self::$dataStore = $dataProvider;
     }
 
-    public static function getTerm()
+    public static function getTerm($term)
     {
-        return self::$dataStore->getTerm();
+        return self::$dataStore->getTerm($term);
     }
 
     public static function getTerms()

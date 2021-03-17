@@ -18,10 +18,10 @@
                 </td>
                 <td><?=$item->definition?>
                 </td>
-                <td><a href="edit.php?key=<?=$item->term?>">Edit</a>
+                <td><a href="edit.php?key=<?=$item->id?>">Edit</a>
                 </td>
                 <td><a
-                        href="delete.php?key=<?=$item->term?>">Delete</a>
+                        href="delete.php?key=<?=$item->id?>">Delete</a>
                 </td>
             </tr>
             <?php endforeach;?>
