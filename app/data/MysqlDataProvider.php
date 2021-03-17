@@ -13,6 +13,18 @@ class MysqlDataProvider extends DataProvider
 
     public function getTerms()
     {
+        $db = $this->connect();
+        if ($db == null) {
+            return [];
+        }
+
+        $sql = 'SELECT * FROM terms';
+        $query = $db->query($sql);
+        $data = $query->fetchAll(PDO::FETCH_CLASS, 'GlossaryTerm');
+        $query = null;
+        $db = null;
+        return $data;
+
     }
 
     public function getTerm($term)
@@ -21,6 +33,7 @@ class MysqlDataProvider extends DataProvider
 
     public function searchTerms($search)
     {
+
     }
 
     public function addTerm($term, $definition)

@@ -12,9 +12,7 @@ if (isPost()) {
         // TODO: warn user
     } else {
         Data::addTerm($term, $definition);
-        header('location: ' . APP_PATH . '/index.php');
-        die();
-        // redirect('index.php');
+        redirect('index.php');
     }
 }
 
